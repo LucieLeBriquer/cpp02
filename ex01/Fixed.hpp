@@ -29,11 +29,11 @@ class Fixed
 		~Fixed();
 		Fixed	&operator=(const Fixed &fixed);
 		int		getRawBits(void) const;
-		void	setRawBits(int const raw);
+		void	setRawBits(const int raw);
 		float	toFloat(void) const;
 		int		toInt(void) const;
 };
 
-std::ostream	&operator<<(std::ostream &o, Fixed const &fixed);
+std::ostream	&operator<<(std::ostream &o, const Fixed &fixed);
 
 #endif

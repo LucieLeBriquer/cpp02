@@ -6,7 +6,7 @@
 /*   By: lle-briq <lle-briq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:30:58 by lle-briq          #+#    #+#             */
-/*   Updated: 2021/12/13 18:56:05 by lle-briq         ###   ########.fr       */
+/*   Updated: 2021/12/13 19:16:00 by lle-briq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	Fixed::getRawBits(void) const
 	return (this->_pf);
 }
 
-void	Fixed::setRawBits(int const raw)
+void	Fixed::setRawBits(const int raw)
 {
 	std::cout << "setRawBits member function called" << std::endl;
 	this->_pf = raw;
@@ -69,7 +69,7 @@ int	Fixed::toInt(void) const
 	return ((int)(roundf((float)_pf / (1 << _nbFrac))));
 }
 
-std::ostream	&operator<<(std::ostream &o, Fixed const &fixed)
+std::ostream	&operator<<(std::ostream &o, const Fixed &fixed)
 {
 	o << fixed.toFloat();
 	return (o);

@@ -6,7 +6,7 @@
 /*   By: lle-briq <lle-briq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:30:36 by lle-briq          #+#    #+#             */
-/*   Updated: 2021/12/13 18:02:09 by lle-briq         ###   ########.fr       */
+/*   Updated: 2021/12/13 19:18:49 by lle-briq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@
 class Fixed
 {
 	private:
-		int	_pf;
-		static const int _nbFrac = 8;
+		int					_pf;
+		static const int	_nbFrac = 8;
 
 	public:
-		Fixed();
-		Fixed(Fixed &fixed);
+		Fixed(void);
+		Fixed(const Fixed &fixed);
 		~Fixed();
-		Fixed	&operator=(Fixed &fixed);
+		Fixed	&operator=(const Fixed&fixed);
 		int		getRawBits(void) const;
-		void	setRawBits(int const raw);
+		void	setRawBits(const int raw);
 };
 
 #endif
