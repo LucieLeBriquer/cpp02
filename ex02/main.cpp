@@ -6,7 +6,7 @@
 /*   By: lle-briq <lle-briq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 17:59:44 by lle-briq          #+#    #+#             */
-/*   Updated: 2021/12/15 22:24:26 by lle-briq         ###   ########.fr       */
+/*   Updated: 2021/12/15 23:28:08 by lle-briq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static std::string	boolToString(bool b)
 	return ("false");
 }
 
-static void	testComparison()
+static void	testComparison(void)
 {
 	Fixed	a(6.95f);
 	Fixed	b(7);
@@ -71,7 +71,7 @@ static void	testComparison()
 	std::cout << "  a == a ? " << boolToString(a == a) << std::endl;
 }
 
-static void	testArithmetic()
+static void	testArithmetic(void)
 {
 	Fixed	a(6.95f);
 	Fixed	b(7);
@@ -85,7 +85,7 @@ static void	testArithmetic()
 	std::cout << "  a / b = " << a / b << std::endl;
 }
 
-static void	testIncrement()
+static void	testIncrement(void)
 {
 	Fixed	a(1);
 
@@ -93,6 +93,43 @@ static void	testIncrement()
 	std::cout << "a++ = " << a++ << std::endl;
 	std::cout << "a = " << a << std::endl;
 	std::cout << "++a = " << ++a << std::endl;
+	std::cout << "a-- = " << a-- << std::endl;
+	std::cout << "a = " << a << std::endl;
+	std::cout << "--a = " << --a << std::endl;
+	std::cout << "a.op--(5) = " << a.operator--(5) << std::endl;
+	std::cout << "a = " << a << std::endl;
+	std::cout << "a.op++(500) = " << a.operator++(500) << std::endl;
+	std::cout << "a = " << a << std::endl;
+}
+
+static void	testMaxMin(void)
+{
+	Fixed		a(-10.25f);
+	Fixed		b(-9);
+	Fixed const	c(-9);
+
+	printTitle("MAX/MIN");
+	std::cout << "a = " << a << "  b = " << b << std::endl;
+	std::cout << "  max(a,b) = " << Fixed::max(a, b) << std::endl;
+	std::cout << "  min(a,b) = " << Fixed::min(a, b) << std::endl;
+	std::cout << "a = " << a << "  c(const) = " << b << std::endl;
+	std::cout << "  max(a,c) = " << Fixed::max(a, c) << std::endl;
+	std::cout << "  min(a,c) = " << Fixed::min(a, c) << std::endl;
+}
+
+static void	testSubject(void)
+{
+	Fixed		a;
+	Fixed const	b(Fixed(5.05f) * Fixed(2));
+
+	printTitle("SUBJECT");
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << Fixed::max(a, b) << std::endl;
 }
 
 int	main(void)
@@ -100,5 +137,7 @@ int	main(void)
 	testComparison();
 	testArithmetic();
 	testIncrement();
+	testMaxMin();
+	testSubject();
 	return (0);
 }

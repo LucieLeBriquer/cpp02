@@ -6,7 +6,7 @@
 /*   By: lle-briq <lle-briq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:30:58 by lle-briq          #+#    #+#             */
-/*   Updated: 2021/12/15 21:56:06 by lle-briq         ###   ########.fr       */
+/*   Updated: 2021/12/15 22:54:05 by lle-briq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -183,4 +183,40 @@ Fixed	Fixed::operator--(int n)
 			++(*this);
 	}
 	return (temp);
+}
+
+Fixed	&Fixed::min(Fixed &fixed1, Fixed &fixed2)
+{
+	if (CALL_LOG)
+		std::cout << "Static min function called" << std::endl;
+	if (fixed1 <= fixed2)
+		return (fixed1);
+	return (fixed2);
+}
+
+Fixed	&Fixed::max(Fixed &fixed1, Fixed &fixed2)
+{
+	if (CALL_LOG)
+		std::cout << "Static max function called" << std::endl;
+	if (fixed1 >= fixed2)
+		return (fixed1);
+	return (fixed2);
+}
+
+const Fixed	&Fixed::min(const Fixed &fixed1, const Fixed &fixed2)
+{
+	if (CALL_LOG)
+		std::cout << "Static const min overload called" << std::endl;
+	if (fixed1 <= fixed2)
+		return (fixed1);
+	return (fixed2);
+}
+
+const Fixed	&Fixed::max(const Fixed &fixed1, const Fixed &fixed2)
+{
+	if (CALL_LOG)
+		std::cout << "Static const max overload called" << std::endl;
+	if (fixed1 >= fixed2)
+		return (fixed1);
+	return (fixed2);
 }
