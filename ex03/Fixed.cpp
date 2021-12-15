@@ -12,7 +12,7 @@
 
 #include "Fixed.hpp"
 
-Fixed::Fixed() : _pf(0)
+Fixed::Fixed(void) : _pf(0)
 {
 	if (CALL_LOG)
 		std::cout << "Default constructor called" << std::endl;
