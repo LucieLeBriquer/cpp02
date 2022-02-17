@@ -6,7 +6,7 @@
 /*   By: lle-briq <lle-briq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 23:48:21 by lle-briq          #+#    #+#             */
-/*   Updated: 2021/12/16 00:11:08 by lle-briq         ###   ########.fr       */
+/*   Updated: 2022/02/17 18:56:30 by lle-briq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Point::~Point()
 	return ;
 }
 
-Point &Point::operator=(const Point &point)	// x and y are const, cant be assigned
+Point &Point::operator=(const Point &point)
 {
 	(void)point;
 

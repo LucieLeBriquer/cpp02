@@ -6,7 +6,7 @@
 /*   By: lle-briq <lle-briq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:30:58 by lle-briq          #+#    #+#             */
-/*   Updated: 2021/12/15 22:54:05 by lle-briq         ###   ########.fr       */
+/*   Updated: 2022/02/17 18:26:31 by lle-briq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ Fixed::Fixed(void) : _pf(0)
 {
 	if (CALL_LOG)
 		std::cout << "Default constructor called" << std::endl;
-	return ;
 }
 
 Fixed::Fixed(const Fixed &fixed)
@@ -30,14 +29,12 @@ Fixed::Fixed(const int n) : _pf(n << _nbFrac)
 {
 	if (CALL_LOG)
 		std::cout << "Int constructor called" << std::endl;
-	return ;
 }
 
 Fixed::Fixed(const float f) : _pf((int)roundf(f * (1 << _nbFrac)))
 {
 	if (CALL_LOG)
 		std::cout << "Float constructor called" << std::endl;
-	return ;
 }
 
 Fixed::~Fixed()
@@ -49,7 +46,7 @@ Fixed::~Fixed()
 Fixed	&Fixed::operator=(const Fixed &fixed)
 {
 	if (CALL_LOG)
-		std::cout << "Assignation operator called" << std::endl;
+		std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &fixed)
 		this->_pf = fixed.getRawBits();
 	return (*this);
@@ -57,6 +54,8 @@ Fixed	&Fixed::operator=(const Fixed &fixed)
 
 int	Fixed::getRawBits(void) const
 {
+	if (CALL_LOG)
+		std::cout << "getRawBits member function called" << std::endl;
 	return (this->_pf);
 }
 

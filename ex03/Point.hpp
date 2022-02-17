@@ -6,11 +6,13 @@
 /*   By: lle-briq <lle-briq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 00:17:05 by lle-briq          #+#    #+#             */
-/*   Updated: 2021/12/16 00:24:04 by lle-briq         ###   ########.fr       */
+/*   Updated: 2022/02/17 18:56:19 by lle-briq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef POINT_HPP
+# define POINT_HPP
+# include "Fixed.hpp"
 
 class Point
 {
@@ -31,3 +33,6 @@ class Point
 };
 
 std::ostream &operator<<(std::ostream &o, const Point &point);
+bool	bsp(const Point a, const Point b, const Point c, const Point point);
+
+#endif
