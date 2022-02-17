@@ -6,7 +6,7 @@
 /*   By: lle-briq <lle-briq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:30:36 by lle-briq          #+#    #+#             */
-/*   Updated: 2021/12/13 19:06:20 by lle-briq         ###   ########.fr       */
+/*   Updated: 2022/02/17 18:15:09 by lle-briq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ class Fixed
 		Fixed(const int n);
 		Fixed(const float f);
 		~Fixed();
+		
 		Fixed	&operator=(const Fixed &fixed);
+
 		int		getRawBits(void) const;
 		void	setRawBits(const int raw);
 		float	toFloat(void) const;
