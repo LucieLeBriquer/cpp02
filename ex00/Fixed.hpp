@@ -6,7 +6,7 @@
 /*   By: lle-briq <lle-briq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:30:36 by lle-briq          #+#    #+#             */
-/*   Updated: 2021/12/13 19:18:49 by lle-briq         ###   ########.fr       */
+/*   Updated: 2022/02/17 18:09:08 by lle-briq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Fixed
 		Fixed(const Fixed &fixed);
 		~Fixed();
 		Fixed	&operator=(const Fixed&fixed);
+		
 		int		getRawBits(void) const;
 		void	setRawBits(const int raw);
 };
