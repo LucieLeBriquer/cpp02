@@ -6,7 +6,7 @@
 /*   By: lle-briq <lle-briq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 23:48:21 by lle-briq          #+#    #+#             */
-/*   Updated: 2022/02/17 18:56:30 by lle-briq         ###   ########.fr       */
+/*   Updated: 2022/03/23 17:22:42 by lle-briq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Point::Point(const Point &point) : _x(point._x), _y(point._y)
 	return ;
 }
 
-Point::Point(const Fixed &fixedX, const Fixed &fixedY) : _x(fixedX), _y(fixedY)
+Point::Point(const float &floatX, const float &floatY) : _x(Fixed(floatX)), _y(Fixed(floatY))
 {
 	return ;
 }

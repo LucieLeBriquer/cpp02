@@ -6,7 +6,7 @@
 /*   By: lle-briq <lle-briq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 00:17:05 by lle-briq          #+#    #+#             */
-/*   Updated: 2022/02/17 18:56:19 by lle-briq         ###   ########.fr       */
+/*   Updated: 2022/03/23 17:21:32 by lle-briq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Point
 	public:
 		Point(void);
 		Point(const Point &point);
-		Point(const Fixed &fixedX, const Fixed &fixedY);
+		Point(const float &floatX, const float &floatY);
 		~Point();
 
 		float	getX(void) const;
